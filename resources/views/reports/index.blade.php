@@ -51,33 +51,33 @@
 <div class="row">
     <!-- Stat Summary Cards -->
     <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card-custom stat-card text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border: none;">
-            <div class="stat-card-icon text-white-50"><i class="fa-solid fa-rupiah-sign"></i></div>
-            <div class="stat-card-label text-white-50">Total Pendapatan</div>
-            <div class="stat-card-val text-white">Rp {{ number_format($totalSales, 0, ',', '.') }}</div>
-            <div class="text-white-50 mt-2" style="font-size: 13px;">
+        <div class="card-custom stat-card">
+            <div class="stat-card-icon text-success opacity-25"><i class="fa-solid fa-rupiah-sign"></i></div>
+            <div class="stat-card-label">Total Pendapatan</div>
+            <div class="stat-card-val text-success">Rp {{ number_format($totalSales, 0, ',', '.') }}</div>
+            <div class="text-muted mt-2" style="font-size: 13px;">
                 <i class="fa-solid fa-cash-register me-1"></i> Dari {{ $trxCount }} Transaksi
             </div>
         </div>
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card-custom stat-card text-white" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); border: none;">
-            <div class="stat-card-icon text-white-50"><i class="fa-solid fa-cart-shopping"></i></div>
-            <div class="stat-card-label text-white-50">Total Pembelian Stok</div>
-            <div class="stat-card-val text-white">Rp {{ number_format($totalPurchases, 0, ',', '.') }}</div>
-            <div class="text-white-50 mt-2" style="font-size: 13px;">
+        <div class="card-custom stat-card">
+            <div class="stat-card-icon text-danger opacity-25"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="stat-card-label">Total Pembelian Stok</div>
+            <div class="stat-card-val text-danger">Rp {{ number_format($totalPurchases, 0, ',', '.') }}</div>
+            <div class="text-muted mt-2" style="font-size: 13px;">
                 <i class="fa-solid fa-truck-ramp-box me-1"></i> Pengeluaran Supplier
             </div>
         </div>
     </div>
 
     <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card-custom stat-card text-white" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border: none;">
-            <div class="stat-card-icon text-white-50"><i class="fa-solid fa-scale-balanced"></i></div>
-            <div class="stat-card-label text-white-50">Estimasi Laba Bersih</div>
-            <div class="stat-card-val text-white">Rp {{ number_format($estimatedProfit, 0, ',', '.') }}</div>
-            <div class="text-white-50 mt-2" style="font-size: 13px;">
+        <div class="card-custom stat-card">
+            <div class="stat-card-icon text-primary opacity-25"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="stat-card-label">Estimasi Laba Bersih</div>
+            <div class="stat-card-val text-primary">Rp {{ number_format($estimatedProfit, 0, ',', '.') }}</div>
+            <div class="text-muted mt-2" style="font-size: 13px;">
                 <i class="fa-solid fa-sack-dollar me-1"></i> Pendapatan - Pembelian
             </div>
         </div>
@@ -85,7 +85,7 @@
 
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card-custom stat-card">
-            <div class="stat-card-icon text-primary"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-card-icon text-secondary opacity-25"><i class="fa-solid fa-users"></i></div>
             <div class="stat-card-label">Volume Transaksi</div>
             <div class="stat-card-val">{{ $trxCount }} Trx</div>
             <div class="text-muted mt-2" style="font-size: 13px;">
@@ -122,9 +122,9 @@
                 </div>
             @else
                 <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
-                    <table class="table table-hover align-middle">
+                    <table class="table table-custom table-hover align-middle">
                         <thead>
-                            <tr class="table-light">
+                            <tr>
                                 <th>ID</th>
                                 <th>Tanggal</th>
                                 <th>Kasir</th>
@@ -162,9 +162,9 @@
                 </div>
             @else
                 <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
-                    <table class="table table-hover align-middle">
+                    <table class="table table-custom table-hover align-middle">
                         <thead>
-                            <tr class="table-light">
+                            <tr>
                                 <th>ID</th>
                                 <th>Tanggal</th>
                                 <th>Supplier</th>
@@ -217,8 +217,8 @@
                 datasets: [{
                     label: 'Pendapatan Penjualan (Rp)',
                     data: totals,
-                    backgroundColor: 'rgba(242, 78, 30, 0.75)',
-                    hoverBackgroundColor: '#f24e1e',
+                    backgroundColor: 'rgba(230, 57, 70, 0.75)',
+                    hoverBackgroundColor: '#E63946',
                     borderRadius: 6,
                     borderWidth: 0
                 }]

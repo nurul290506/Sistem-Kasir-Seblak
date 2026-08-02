@@ -17,6 +17,7 @@ class TransaksiController extends Controller
         // Cashier page (POS interface)
         $items = Barang::with('kategori')
             ->where('status', 'aktif')
+            ->orderBy('id_kategori', 'asc')
             ->orderBy('nama_barang', 'asc')
             ->get();
         

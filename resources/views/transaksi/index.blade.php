@@ -7,15 +7,16 @@
     <!-- Left Column: Search & Item Catalog -->
     <div class="pos-catalog-column">
         <!-- Search and Catalog Filter -->
-        <div class="catalog-header">
-            <div class="input-group" style="max-width: 350px;">
+        <div class="d-flex align-items-center justify-content-between mb-4 gap-3">
+            <div class="input-group" style="width: 300px; flex-shrink: 0;">
                 <span class="input-group-text bg-white border-end-0 text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" id="search-input" class="form-control border-start-0" placeholder="Cari topping atau minuman...">
             </div>
             
-            <div class="pos-categories-nav m-0">
+            <div class="d-flex gap-2 overflow-auto ms-auto" style="white-space: nowrap; padding-bottom: 4px;">
                 <button class="btn-cat-filter active" data-category="all">Semua Menu</button>
-                <button class="btn-cat-filter" data-category="Topping">Topping (Frozen Food)</button>
+                <button class="btn-cat-filter" data-category="Topping">Topping & Seblak</button>
+                <button class="btn-cat-filter" data-category="Cemilan">Cemilan</button>
                 <button class="btn-cat-filter" data-category="Minuman">Minuman</button>
             </div>
         </div>
